@@ -1,13 +1,17 @@
-<h1>Recipe Reader</h1>
 
-<form action="<%= recipes_url %>" method="post">
-	<input
-	    type="hidden"
-	    name="authenticity_token"
-	    value="<%= form_authenticity_token %>">
+<div class="row">
+  <h1>RECIPEREADER</h1>
+    <div class="span12">
+      <form action="<%= recipes_url %>" method="post">
+      	<input
+      	    type="hidden"
+      	    name="authenticity_token"
+      	    value="<%= form_authenticity_token %>">
 
-	<label for="recipe">Recipe URL: </label>
-	<input type="text" name="recipe" id="recipe">
+      	<label for="recipe">Recipe URL: </label>
+      	<input type="text" name="recipe" id="recipe">
 
-	<input type="submit" value="Submit" >
-</form>
+      	<input type="submit" value="Submit" >
+      </form>
+    </div>
+</div>

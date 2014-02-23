@@ -11,3 +11,32 @@
  *= require_self
  *= require_tree .
  */
+body {
+     margin: 0;
+     background: url('sushi.jpeg');
+     background-size: 100% 200%;
+     background-repeat:no-repeat;
+    display: compact;
+  font-family: 'Lato', sans-serif;
+}
+
+.row {
+  text-align: center
+}
+
+h1 {
+  padding-bottom: 30px;
+font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  text-align: center
+}
+
+#recipe {
+  width: 80%;
+}
+
+footer {
+
+}

@@ -34,12 +34,17 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
+  background-color:rgba(245,245,255,0.85);
   padding-bottom: 80px;
-  width: 100%;
-  margin-top: 51px; // accommodate the navbar
+  width: 50%;
+  margin-top: 300px; // accommodate the navbar
+    font-family: 'Lato', sans-serif;
+    border:2px;
+    border-radius:100px;
+
   }
 section {
   @extend .row;
   margin-top: 20px;
+    font-family: 'Lato', sans-serif;
   }

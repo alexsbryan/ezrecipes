@@ -1,13 +1,10 @@
-<h1>Your recipe</h1>
-<p><%=@ingredients %></p>
-<p><%=@instructions %>
+<h2><%= @rec.name.titleize %></h2>
 
 <% @ingredients.each do |ingredient| %>
 <% ingred = Ingreedy.parse(ingredient) %>
-<p><%= amt = ingred.amount %> </p>
-<p><%= ing = ingred.ingredient %> </p>
-<p><%= unit = ingred.unit %> </p>
-
+<p><% amt = ingred.amount %> </p>
+<p><% ing = ingred.ingredient %> </p>
+<p><% unit = ingred.unit %> </p>
 <% @rec.interpolate_into_recipe(amt,ing,unit) %>
 
 <% end %>
