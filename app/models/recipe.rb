@@ -28,8 +28,10 @@ class Recipe < ActiveRecord::Base
     unit = unit
     ing_to_check_arr = ingredient.split(' ')
 
-    if self.instructions.scan(/#{self.ingredients.join(' ')}/i)
-      chosen_word = ingredient
+    ingred = ing.split.join(" ")
+
+    if !self.instructions.scan(/#{ingred}/i).empty?
+      chosen_word = ingred
     else
 
       possibilities = []
@@ -37,7 +39,6 @@ class Recipe < ActiveRecord::Base
       ing_to_check_arr.each do |ing|
         possibilities = self.instruction_array.select {|wrd| wrd==ing}
       end
-      p possibilities
 
       possibilities = possibilities.keep_if{|ingred_word| !self.replaced_words.include?(ingred_word)} unless self.replaced_words.nil?
 
@@ -68,7 +69,8 @@ class Recipe < ActiveRecord::Base
 
     self.final_instructions.gsub!(chosen_word, replacement)
     self.replaced_words = self.replaced_words.to_a
-    self.replaced_words << chosen_word
+
+    chosen_word.split.each {|wrd| self.replaced_words << wrd}
 
   end
 
@@ -84,7 +86,7 @@ class Recipe < ActiveRecord::Base
   def create_fraction(num)
     f = Fractional.new(num).to_f
     if f%1 != 0
-      return Fractional.new(f).to_s
+      return Fractional.new(f).to_s(mixed_number: true)
     else
       return f.to_i.to_s
     end
