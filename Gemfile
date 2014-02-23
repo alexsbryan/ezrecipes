@@ -38,6 +38,8 @@ gem 'ingreedy'
 
 gem "fractional", "~> 1.0.1"
 
+gem 'rails_12factor', group: :production
+
 gem 'bootstrap-sass'
 group :development do
   gem 'rails_layout'
