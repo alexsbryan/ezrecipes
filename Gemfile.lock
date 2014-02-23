@@ -131,6 +131,7 @@ DEPENDENCIES
   ingreedy
   jbuilder (~> 1.2)
   jquery-rails
+  nokogiri
   pg
   rails (= 4.0.3)
   rails_12factor
