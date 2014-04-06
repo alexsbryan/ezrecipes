@@ -32,17 +32,40 @@ img {
   }
 // apply styles to HTML elements
 // to make views framework-neutral
-main {
+.thing {
   @extend .container;
   background-color:rgba(245,245,255,0.85);
   padding-bottom: 80px;
-  width: 50%;
-  margin-top: 300px; // accommodate the navbar
+  width: 100%;
+  margin-top: 200px; // accommodate the navbar
     font-family: 'Lato', sans-serif;
     border:2px;
-    border-radius:100px;
+    border-radius:20px;
 
   }
+
+	.thing-home {
+	  @extend .container;
+	  background-color:rgba(245,245,255,0.85);
+	  padding-bottom: 80px;
+	  width: 50%;
+	  margin-top: 150px; // accommodate the navbar
+	    font-family: 'Lato', sans-serif;
+	    border:2px;
+	    border-radius:20px;
+
+	  }
+
+	.other-thing {
+	  @extend .container;
+	  background-color:rgba(245,245,255,0.85);
+	  padding-bottom: 0px;
+		padding-left: 0px;
+	  margin-top: 200px; // accommodate the navbar
+	    font-family: 'Lato', sans-serif;
+	    border:2px;
+	    border-radius:20px;
+	}
 section {
   @extend .row;
   margin-top: 20px;

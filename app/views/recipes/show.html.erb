@@ -1,12 +1,26 @@
-<h2><%= @rec.name.titleize %></h2>
+<div class="row">
+	<div class="col-xs-2 col-xs-offset-1 other-thing">
+		<ul>
+			<% @ingredients.each do |ingredient| %>
+			<% ingred = Ingreedy.parse(ingredient) %>
+			<% amt = ingred.amount * @scale %>
+			<li>
+				<%= Recipe.create_fraction(amt) %>
+				<%= unit = ingred.unit %>
+				<%= ing = ingred.ingredient %></li>
 
-<% @ingredients.each do |ingredient| %>
-<% ingred = Ingreedy.parse(ingredient) %>
-<p><% amt = ingred.amount %> </p>
-<p><% ing = ingred.ingredient %> </p>
-<p><% unit = ingred.unit %> </p>
-<% @rec.interpolate_into_recipe(amt,ing,unit) %>
+				<% @rec.interpolate_into_recipe(amt,ing,unit) %>
 
-<% end %>
+				<% end %>
+								<a href="http://culinaryarts.about.com/od/culinaryreference/l/blconvert.htm" target="_blank">Convert any unit (external link)</a>
+			</ul>
+		</div>
+		<div class="col-xs-8">
+			<div class="thing">
+				<h2><%= @rec.name.titleize %></h2>
 
-<h2><%= @rec.final_instructions %></h2>
+				<h2><%= @rec.final_instructions %></h2>
+
+			</div>
+		</div>
+	</div>

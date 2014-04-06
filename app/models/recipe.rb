@@ -57,7 +57,7 @@ class Recipe < ActiveRecord::Base
     if amt == 0
       amt= ''
     else
-      amt = create_fraction(amount)
+      amt = self.class.create_fraction(amount)
     end
 
 
@@ -83,7 +83,7 @@ class Recipe < ActiveRecord::Base
     self.final_instructions = self.instructions if self.final_instructions.nil?
   end
 
-  def create_fraction(num)
+  def self.create_fraction(num)
     f = Fractional.new(num).to_f
     if f%1 != 0
       return Fractional.new(f).to_s(mixed_number: true)

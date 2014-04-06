@@ -11,9 +11,14 @@
     <%= csrf_meta_tags %>
 
   </head>
-  <body>
+  <body class="container-fluid">
 
     <main role="main">
+
+			  <div class="container text-center">
+			    <a href="/"><h1>EZRecipe</h1></a>
+			  </div>
+
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>

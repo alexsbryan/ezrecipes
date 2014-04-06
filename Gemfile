@@ -37,6 +37,7 @@ group :doc do
 end
 
 gem 'hangry'
+gem 'debugger'
 
 gem 'ingreedy'
 
@@ -46,6 +47,8 @@ gem 'rails_12factor', group: :production
 
 gem 'bootstrap-sass'
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rails_layout'
 end
 

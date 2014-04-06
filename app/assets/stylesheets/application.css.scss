@@ -24,8 +24,10 @@ body {
   text-align: center
 }
 
+
+
 h1 {
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 font-family: 'Lato', sans-serif;
 }
 
@@ -40,3 +42,34 @@ h2 {
 footer {
 
 }
+
+a h1 {
+	color: #6DBCC2
+}
+
+a h1:hover {
+	color: #FFFFFF;
+}
+
+.navbar-inverse {
+	background-color: #735353;
+	opacity: .1;
+}
+.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { background-color: #FFFFFF}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { background-color: #080808}
+.dropdown-menu { background-color: #FFFFFF}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #070508}
+.navbar-inverse { border-color: #1A878F}
+.navbar-inverse .navbar-brand { color: #999999}
+.navbar-inverse .navbar-brand:hover { color: #FFFFFF}
+.navbar-inverse .navbar-nav>li>a { color: #999999}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { color: #FFFFFF}
+.dropdown-menu>li>a { color: #333333}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
+
